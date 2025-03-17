@@ -3,3 +3,8 @@
 
 ## fastAPI를 이용한 꽃 분류 시스템을 차근차근 제작
 
+<img src="/front/iris_pic.png">
+
+## 동작화면 예시
+
+<img src="run.png">

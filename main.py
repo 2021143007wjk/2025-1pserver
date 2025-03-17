@@ -1,9 +1,23 @@
 from fastapi import FastAPI
 import uvicorn
+from starlette.middleware.cors import CORSMiddleware
 
 from irisModel import IrisMuchineLearning, IrisSpecies
 
 app = FastAPI()
+
+
+origins = [
+    "*",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 model = IrisMuchineLearning()
 

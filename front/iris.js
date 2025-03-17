@@ -22,18 +22,13 @@ pw = document.getElementById("pw")
     data: JSON.stringify(data),
 
   }).done(function(response) {
-
-        txtOut.value = response.prediction + "  " + response.probability
-
+        txtOut.value = response.prediction
         console.log(response)
 
+  }).fail(function(response) {
+        alert("fail" + response);
 
-  }).fail(function(error) {
-    alert("!/js/user.js에서 에러발생: " + error.statusText);
-    console.log(error)
-  }).always(function(r){
-    console.log("always" + r)
-  });
+  }).always()
 
 
 }
